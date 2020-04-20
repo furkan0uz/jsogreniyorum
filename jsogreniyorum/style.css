@@ -1,0 +1,84 @@
+
+
+body{margin:14px; padding:0; font-size:11px; font-family:Georgia, "Times New Roman", Times, serif; color:#0a0a0a; background: linear-gradient(to right,#a1a1a1, #ffffff);}
+
+.JavaScript:after{content:"."; display:block; height:0; clear:both; visibility:hidden; line-height:0;}
+.JavaScript{display:block; width:100%; clear:both;}
+.head{position: fixed;}
+.head{margin-top:-10em;}
+.head{ border-radius: 20%;}
+.head, .head a{color:rgb(14, 199, 106); background-color:#3bcaa6;}
+#header nav{float:left;}
+#header nav ul{margin:-3px;}z
+#header nav li{display:inline; margin-right:30px; text-transform:uppercase;}
+#header nav li.last{margin-right:0;}
+#header nav a{color:#f6f3f7; background-color:#3bcaa6;}
+#header nav a:hover{color:#23374d;  background: linear-gradient(to right, #139261, #afacac);}
+
+ .js{
+   font-size: 17px;
+    display: inline-block;
+    text-align: left;
+    padding: 14px 20px;
+    text-decoration:none ; 
+  
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    text-align: center;
+    font-size: large;
+    text-decoration: none;
+   position: static;
+   margin-top: 100px;
+  }
+ 
+  p{
+    font-size: large;
+ text-align: left;
+  }
+.jsg{
+  text-align: center;
+  font-size: large;
+  display: inline-block;
+
+}
+li{
+  text-align: left;
+  font-size: large;
+}
+
+  ul{
+    font-size: large;
+    text-align: center;
+  }
+pre{
+  font-size: large;
+  text-align: left;
+}
+h1{
+  color: rgb(0, 26, 255);
+}
+h2{
+  color: rgb(0, 26, 255);
+}
+h4{
+  color: rgb(0, 26, 255);
+}
+h6{
+  color: rgb(0, 26, 255);
+}
+h5{
+  color: rgb(0, 26, 255);
+}
+
+b{
+  color: rgb(0, 26, 255);
+}
+u{
+  font-size: medium;
+}
+td{
+  font-size: medium;
+}b{
+  font-size: large;
+}

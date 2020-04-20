@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="head">
+        <header id="header" class="JavaScript">
+            <div>
+            </div>
+            <nav>
+              <ul class="jjs">
+                <li class="js"><a href="JSgiris.html"> JavaScript Giriş</a></li>
+                <li class="js"><a href="Syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+                <li class="js"><a href="Degiskenler.html"> Değişkenler</a>
+               
+                <li class="js"><a href="Operatörler.html">Operatörler</a>
+                </li>
+                <li class="js"><a href="Aritmetik.html">Aritmetik</a></li>
+                <li class="js"><a href="Veritip.html"> Veri Tipleri</a></li>
+                <li class="js"><a href="Fonk.html">Fonksiyon Yapısı</a></li>
+                <li class="js"><a href="Olaylar.html">Olaylar (Events)</a></li>
+                <li class="js"><a href="Sayı-Dizi.html">Stringler, Sayılar, Diziler ve Dizi İşlemler</a></li>
+                <li class="js"><a href="If.html"> If koşul yapıları</a></li>
+                <li class="js"><a href="Döngüler.html">Döngüler</a></li>
+                <li class="js"><a href="Tip-Dönüsüm.html">Tip Dönüşümleri</a></li>
+                <li class="js"><a href="Mimari.html">Çalışma yapısı ve genel mimarisi</a></li>
+                <li class="js"><a href="Dom.html">Dom Yapısı</a></li>
+                <li class="js"><a href="Object.html">JavaScript Object (Model)</a></li>
+                  </ul>
+              </header>
+    </div>
+        <div>
+            <h1>JavaScript DOM</h1>
+            <p>
+                Tarayıcı bir Web sayfasını yüklendiğinde DOM nesnesini de oluşturur. Yüklenen DOM, belge için bir dizi
+                düğüm ve nesne sunmaktadır. Düğümler ile ayrıca olaylar ve tetikleyiciler eklenebilir. Özetle
+                programlama dilini WEB sayfasına bağlamak için kullanılır.
+            </p>
+            <p>DOM modeli nesneleri aşağıdaki gibi ağaç yapısında oluşturmaktadır. JavaScript, Nesne Modelini kullanarak
+                HTML belgesini düzenlemek için gerekli tüm yetkilere sahiptir. Aşağıdaki gibi belge üzerinde tüm
+                işlemleri gerçekleştirebiliriz.</p>
+
+            <ul>
+                <li>JavaScript sayfadaki tüm HTML öğelerini değiştirebilir</li>
+                <li>JavaScript sayfadaki tüm HTML özelliklerini değiştirebilir</li>
+                <li>JavaScript sayfadaki tüm CSS stillerini değiştirebilir</li>
+                <li>JavaScript mevcut HTML öğelerini ve özelliklerini kaldırabilir</li>
+                <li>JavaScript yeni HTML öğeleri ve özellikleri ekleyebilir</li>
+                <li>JavaScript, sayfadaki mevcut tüm HTML etkinliklerine tepki verebilir</li>
+                <li>JavaScript sayfada yeni HTML etkinlikleri oluşturabilir</li>
+            </ul>
+            <h2>DOM Programlama Arayüzü</h2>
+            <ul>
+                <li>JavaScript ile Tüm HTML DOM ağacına ulaşabilirsiniz.</li>
+                <li>DOM içinde tüm HTML etiketleri birer nesne (object) olarak oluşturulmuştur.</li>
+                <li>Programlama arayüzü her etiket için metot(method) ve özellikler(property) sunar.</li>
+                <li>Özellik( Property) etiket değeri üzerinde okuma ve değiştirme yapma imkanı sunar.(İçeriğideğiştirme
+                    gibi)</li>
+                <li>Methot (Method) etiket üzerinde eylemler gerçekleştirme imkanı sunar.(Yeni etiketler ekleme gibi)
+                </li>
+            </ul>
+            <p>
+                Örnek: Aşağıdaki örnekte id değeri test olan bir etiketin içesindeki yazıyı değiştirme işlemi
+                gerçekleştirilmiştir. Örnekte getElementByIdmetodu, innerHTML özelliği göstermektedir.
+            </p>
+            <pre>
+                &lt;h1 id="test"&gt; &lt;/h1&gt;
+                &lt;script&gt; document.getElementById("test").innerHTML = "Merhaba JavaScript"; &lt;script/&gt;
+            </pre>
+            <p>Aşağıdaki document özellikleri ile de HTML nesnelerine liste olarak erişebilirsiniz. HTML belgesindeki
+                nesneleri dizi listesi olarak çeker.</p>
+            <p>Not: body, head, documentElement, title tek bir nesneyi döndürür. Diğerleri nesnelerden oluşan bir dizi
+                döndürür.</p>
+            <ul>
+                <li>document.anchors ⇨ Sayfadaki tüm bağlantıları erişmek için kullanılır.</li>
+                <li> document.body ⇨Body nesnesine ulaşmak için kullanılır</li>
+                <li>document.documentElement ⇨HTML kökünden itibaren tüm dökümana ulaşmak için kullanılır.</li>
+                <li>document.embeds ⇨ eklentilere ulaşmak için kullanılır.</li>
+                <li>document.forms ⇨ Sayfadaki formlara ulaşmak için kullanılır</li>
+                <li>document.head ⇨ head etiketine ulaşmak için kullanılır.</li>
+                <li>document.images ⇨Sayfadaki resimlere ulaşmak için</li>
+                <li>document.links ⇨ Sayfadaki linklere ulaşmak için kullanılır.(a href olan nesneler)</li>
+                <li>document.scripts ⇨ Sayfada yüklenen Script dosyalarına ulaşmak için kullanılır.</li>
+                <li>document.title ⇨ Sayfa başlığına ulaşmak için kullanılır.</li>
+            </ul>
+            <p>Örnek: document.getElementsByTagName kullanımı</p>
+            <pre>
+                &lt;script&gt;
+                var nesneler= document.getElementsByName("yazar"); console.log(nesneler); &lt;script/&gt;
+            </pre>
+            <h2>HTML Etiketi Ekleme ve Silme</h2>
+            <ul>
+                <li>document.createElement(element): HTML etiketi oluşturma</li>
+                <li>document.removeChild(element): HTML etiketi silme</li>
+                <li> document.appendChild(element): HTML etiketi ekleme</li>
+                <li>document.replaceChild(element): HTML etiketini değiştirme</li>
+            </ul>
+            <pre>
+                &lt;select id="takim"&gt;
+                &lt;option value="1"&gt; Galatasaray &lt;/option&gt;
+                &lt;select&gt;
+                &lt;script&gt;
+                var takimListe=document.getElementById("takim");
+                var takim= document.createElement("option");    
+                takim.setAttribute("value","2");
+                takim.innerHTML="Beşiktaş";
+                takimListe.appendChild(takim);
+                &lt;/script&gt;&gt;
+            </pre>
+        </div>
+</body>
+
+</html>

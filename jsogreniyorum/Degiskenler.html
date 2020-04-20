@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="head">
+        <header id="header" class="JavaScript">
+            <div>
+            </div>
+            <nav>
+              <ul class="jjs">
+                <li class="js"><a href="JSgiris.html"> JavaScript Giriş</a></li>
+                <li class="js"><a href="Syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+                <li class="js"><a href="Degiskenler.html"> Değişkenler</a>
+               
+                <li class="js"><a href="Operatörler.html">Operatörler</a>
+                </li>
+                <li class="js"><a href="Aritmetik.html">Aritmetik</a></li>
+                <li class="js"><a href="Veritip.html"> Veri Tipleri</a></li>
+                <li class="js"><a href="Fonk.html">Fonksiyon Yapısı</a></li>
+                <li class="js"><a href="Olaylar.html">Olaylar (Events)</a></li>
+                <li class="js"><a href="Sayı-Dizi.html">Stringler, Sayılar, Diziler ve Dizi İşlemler</a></li>
+                <li class="js"><a href="If.html"> If koşul yapıları</a></li>
+                <li class="js"><a href="Döngüler.html">Döngüler</a></li>
+                <li class="js"><a href="Tip-Dönüsüm.html">Tip Dönüşümleri</a></li>
+                <li class="js"><a href="Mimari.html">Çalışma yapısı ve genel mimarisi</a></li>
+                <li class="js"><a href="Dom.html">Dom Yapısı</a></li>
+                <li class="js"><a href="Object.html">JavaScript Object (Model)</a></li>
+                  </ul>
+              </header>
+      </div>
+    
+
+    <div>
+        
+        <h1>Değişkenler</h1>
+        <hr>
+        <p>Değişken, içinde değerler saklayabileceğiniz bir programlama aracıdır. Değişkenlerin sakladığı değer kod
+            sayfaları boyunca değişebilir, birbirine aktarılabilir. Değişkene başka bir değer atayabilirsiniz veya
+            değişkenin sakladığı değeri program içinde kullanabilirsiniz.
+            Değişkenler genellikle programın başlangıcında isimlendirir; böylece bu isimlerle değişkeni çağırabilir,
+            değişkenin taşıdığı değeri kullanabilirsiniz.</p>
+        <p>Not: Değişkenin ismi program boyunca değişmez, ancak taşıdığı değer değişebilir.</p>
+    </div>
+
+    <div>
+        <h4>Değişken İsimleri</h4>
+        <p>Değişkenleri isimlendirirken dikkat etmemiz gereken bazı kurallar vardır:</p>
+        <ul>
+            <li>Değişken ismi harf, rakam veya "_" (altçizgi) karakterlerinden oluşabilir.</li>
+            <li>Değişken isminin ilk karakteri bir harf veya "_" (alt çizgi) işareti olmalıdır. (vol_html23 gibi)</li>
+            <li>JavaScript küçük harf, büyük harf ayrımı yapar. Mesela değişken isminiz DIAZ ise, bu değişkeni hep böyle
+                büyük harflerle yazmak zorundasınız. diaz yazarsanız, gözatıcı bunu farklı bir değişken olarak okur.
+            </li>
+            <li>Değişken isimlerinin uzunluğu 255 karakter kadar olabilir.</li>
+            <li>Değişken isimleri içinde diğer semboller (+, -, /, boşluk, vb.) yer alamaz.</li>
+            <li>Değişken isimlerinde İngilizce'de olmayan karakterleri (ş, ç, ö, vb.) kullanmayınız. (Genellikle yeni
+                kullanıcılar bu kuralı her zaman anımsamıyorlar.</li>
+        </ul>
+    </div>
+    <div>
+        <h4>Değişkenlere Değer Verme</h4>
+        <p>Değişkenlere değer verirken, değişken her zaman sol tarafta yer alır. Mesela sayi değişkenine 15 değerini
+            vereceksek, şöyle yazarız:<br><br>
+            sayi= 15
+        </p>
+        <p>Değişkenler birbirinin değerini de alabilir. Her zaman sola yazılan ifade, sağdaki değeri alır. Örneğin şu
+            iki değişkene bakalım:<br><br>
+            sayi1= 5<br>
+            sayi2= 10<br>
+            sayi1= sayi2
+        </p>
+        <p>Burada sayi1 ve sayi2 isimli iki değişken söz konusu. Önce sayi1 isimli değişkene 5 değeri veriliyor. Sonra
+            sayi2 değişkenine 10 değeri veriliyor. Sonra sayi1 değişkenine sayi2'nin değeri verilerek, sayi1'in değeri
+            değiştiriliyor. Böylece sayi1= 10, sayi2= 10 oluyor. Eğer sayi2 = sayi1 ifadesi olsaydı (sayi2 solda
+            yeralsaydı), sayi1'in değeri sayi2'ye verilmiş olacaktı. Bu durumda sonuç değişik olurdu: sayi1= 5, sayi2= 5
+            şeklinde olur.
+        </p>
+        <h5>Uygulama:</h5>
+        <pre>
+            &lt;html&gt;
+            &lt;head&gt;
+            &lt;title&gt;JavaScript Uygulaması&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+
+            &lt;script language="JavaScript"&gt;
+            sayi1=5
+            sayi2=10
+            sayi1= sayi2
+            document.write(sayi1)
+            document.write("&lt;br&gt;")
+            document.write(sayi2)
+            &lt;/script&gt;
+
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+        <p>Dikkat ederseniz document.write(...) kodunun parantez arasına değişkenleri yazarken, tırnak işareti
+            kullanmadık. Çünkü değişkenler HTML elemanı değil, JavaScript elemanı. Bu üç kod yerine şöyle yazabilirdik:
+            document.write(sayi1 + "<br>" + sayi2). İsterseniz değişkenlerin yerini değiştirelim (sayi2 = sayi1
+            yapalım):
+            <pre>
+            &lt;html&gt;
+            &lt;head&gt;
+            &lt;title&gt;JavaScript Uygulaması&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+
+            &lt;script language="JavaScript"&gt;
+            sayi1=5
+            sayi2=10
+            sayi2= sayi1
+            document.write(sayi1 + "&lt;br&gt;" + sayi2)
+            &lt;/script&gt;
+
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+        </p>
+    </div>
+
+    <div>
+        <h4>Değişken Tanımlama ve Değişken Türleri</h4>
+        <p>Yukarıdaki uygulamalarımızda değişkenlere değer verdik ama onları tanımlamadık, tanımlamak zorunda da
+            değiliz. Ancak bu değişkenleri var kodu ile baştan tanımlamak doğru bir yaklaşımdır.
+            Aşağıdaki üç durum da aynı şeyi ifade ediyor:
+        </p>
+        <pre>
+           var sayi1<br>
+           var sayi2<br>
+           sayi1=5<br>
+           sayi2=10<br>
+           veya,<br>
+           var sayi1, sayi2<br>
+           sayi1=5<br>
+           sayi2=10<br>
+           veya,<br>
+           var sayi1=10, sayı2=5
+        </pre>
+        <p>Bu şekillerde değişkenleri tanımlayabiliyoruz. Şimdiye kadar değişkenlere hep sayısal değerler verdik. Oysa
+            JavaScript değişkenleri 5 çeşit değer alabiliyor:
+        </p>
+        <p>
+            <b>Sayısal Değerler:</b>
+            Aritmetik işlemler yapılabilen her türlü sayısal değer: tam sayı, ondalık sayı, negatif sayı.
+            sayi = 32
+        </p>
+        <p>
+            <b>Alfanümerik Değerler:</b>
+            Aritmetik işlemler yapılmayan, metinsel özellikler taşıyan değerler.
+            sev = "Cameron Diaz"
+        </p>
+        <p>
+            <b>Onay Değerleri:</b>
+            Sadece doğru veya yanlış değerlerini kabul eden değerler. Doğru ifadesi 1 ile, yanlış ifadesi 0 ile ifade ediliyor. (Ecnebiler boolean diyor.)
+            cevap = 1
+        </p>
+        <p>
+            <b>Fonksiyon Değeri:</b>
+            Değişkenler tıpkı sayılar ve metinler gibi fonksiyonları da saklayabilmektedir.
+            yap = selam()
+        </p>
+        <p>
+            <b>Nesne Değeri:</b>
+            Değişkenler HTML nesnelerini (düğme, metin, resim, vb.) değer olarak saklayabilmektedir. (Özellikle gelişmiş JavaScript örneklerimizde çok kullanacağız.) Unutmayalım ki JavaScript nesneye dayalı programdır.
+            eleman = dugme
+        </p>
+    </div>
+
+</body>
+
+</html>

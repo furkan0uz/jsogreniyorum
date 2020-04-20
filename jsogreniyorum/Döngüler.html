@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="head">
+        <header id="header" class="JavaScript">
+            <div>
+            </div>
+            <nav>
+              <ul class="jjs">
+                <li class="js"><a href="JSgiris.html"> JavaScript Giriş</a></li>
+                <li class="js"><a href="Syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+                <li class="js"><a href="Degiskenler.html"> Değişkenler</a>
+               
+                <li class="js"><a href="Operatörler.html">Operatörler</a>
+                </li>
+                <li class="js"><a href="Aritmetik.html">Aritmetik</a></li>
+                <li class="js"><a href="Veritip.html"> Veri Tipleri</a></li>
+                <li class="js"><a href="Fonk.html">Fonksiyon Yapısı</a></li>
+                <li class="js"><a href="Olaylar.html">Olaylar (Events)</a></li>
+                <li class="js"><a href="Sayı-Dizi.html">Stringler, Sayılar, Diziler ve Dizi İşlemler</a></li>
+                <li class="js"><a href="If.html"> If koşul yapıları</a></li>
+                <li class="js"><a href="Döngüler.html">Döngüler</a></li>
+                <li class="js"><a href="Tip-Dönüsüm.html">Tip Dönüşümleri</a></li>
+                <li class="js"><a href="Mimari.html">Çalışma yapısı ve genel mimarisi</a></li>
+                <li class="js"><a href="Dom.html">Dom Yapısı</a></li>
+                <li class="js"><a href="Object.html">JavaScript Object (Model)</a></li>
+                  </ul>
+              </header>
+      </div>
+    <div>
+        <h1>JavaScript Döngüler</h1>
+        <p class="Döngüler1">JavaScript farklı döngü türlerini destekler:</p>
+    
+            <li><b>for</b>: bir kod bloğundan birkaç kez geçer</li>
+            <li><b>for/in</b>: bir nesnenin özellikleri arasında dolaşır</li>
+            <li><b>for/of</b>: yinelenebilir bir nesnenin değerleri arasında dolaşır</li>
+            <li><b>while</b>: belirtilen koşul geçerliyken bir kod bloğundan geçer</li>
+            <li><b>do/while</b>: belirli bir koşul geçerliyken bir kod bloğundan da geçer</li>
+   
+    </div>
+
+    <div>
+        <h2>Döngü </h2>
+        <p><b>for</b> Döngü sözdizimi aşağıdaki gibidir:</p>
+        <pre>
+            &lt;script&gt;
+            var text = "";
+            var i;
+            for (i = 0; i &lt; 5; i++) {
+            text += "The number is " + i + "&lt;br&gt;";
+            }
+            document.getElementById("demo").innerHTML = text;
+            &lt;/script&gt;
+        </pre>
+        <p><b>for</b> döngü sözdizimi aşağıdaki gibidir:</p>
+   
+            <li><b>İfade 1:</b>Kod bloğunun yürütülmesinden önce (bir kez) yürütülür.(İ=0)</li>
+            <li><b>İfade 2:</b>Kod bloğunu yürütme koşulunu tanımlar.(i&lt;5)</li>
+            <li><b>İfade 3:</b>Kod bloğu yürütüldükten sonra (her seferinde) yürütülür.(i++)</li>
+   
+    </div>
+
+    <div>
+        <h3>Bildirim 1</h3>
+        <p>
+            Normalde döngüde kullanılan değişkeni başlatmak için 1. ifadeyi kullanırsınız (i = 0).
+            Bu her zaman böyle değildir, JavaScript umursamaz. Bildirim 1 isteğe bağlıdır.
+        </p>
+        <h3>Bildirim 2</h3>
+        <p>
+            Genellikle ifade 2, ilk değişkenin durumunu değerlendirmek için kullanılır.
+            Bu her zaman böyle değildir, JavaScript umursamaz. Bildirim 2 de isteğe bağlıdır.
+            İfade 2 true değerini döndürürse, döngü yeniden başlar, false döndürürse döngü sona erer.
+        </p>
+        <p><b>NOT:</b>2. ifadeyi atlarsanız , döngü içinde bir mola vermeniz gerekir . Aksi takdirde döngü asla bitmez.
+            Bu, tarayıcınızı kilitler.</p>
+        <h3>Bildirim 3</h3>
+        <p>
+            Genellikle ifade 3, ilk değişkenin değerini artırır.
+            Bu her zaman geçerli değildir, JavaScript umursamaz ve ifade 3 isteğe bağlıdır.
+            İfade 3, negatif artış (i--), pozitif artış (i = i + 15) veya başka bir şey yapabilir.
+        </p>
+    </div>
+
+    <div>
+        <h2>For / In Döngüsü</h2>
+        <p>JavaScript <b>for/in</b> ifadesi bir nesnenin özellikleri arasında dolaşır:</p>
+        <pre>
+            &lt;script&gt;
+            var txt = "";
+            var person = {fname:"John", lname:"Doe", age:25}; 
+            var x;
+            for (x in person) {
+            txt += person[x] + " ";
+            }
+            document.getElementById("demo").innerHTML = txt;
+            &lt;/script&gt;
+        </pre>
+    </div>
+
+    <div>
+        <h2>Döngü İçin / Döngü</h2>
+        <p>JavaScript for/ofifadesi, yinelenebilir bir nesnenin değerleri arasında dolaşır.</p>
+        <p>for/of Diziler, Dizeler, Haritalar, Düğüm Listeleri ve daha fazlası gibi yinelenebilir veri yapıları arasında
+            geçiş yapmanızı sağlar.</p>
+        <p>for/ofDöngü sözdizimi aşağıdaki gibidir:</p>
+        <pre>
+            for (variable of iterable) {
+            // code block to be executed
+            }
+        </pre>
+        <p><b>Değişken:</b>Her yineleme için değişkene sonraki özelliğin değeri atanır. Değişken ile bildirilebilir
+            const, let ya da var.</p>
+        <p><b>İterable:</b>Yinelenebilir özelliklere sahip bir nesne.</p>
+    </div>
+
+    <div>
+        <h2>While Döngüsü</h2>
+        <p>Döngü uzunluğunda belirli bir koşul doğru olarak kod bloğu döngüsü.</p>
+        <h5>Uygulama:</h5>
+        <p>Aşağıdaki örnekte, bir değişken (i) 10'dan az olduğu sürece döngüdeki kod tekrar tekrar çalışacaktır:</p>
+        <pre>
+            &lt;script&gt;
+            var text = "";
+            var i = 0;
+            while (i &lt; 10) {
+            text += "&lt;br&gt;The number is " + i;
+            i++;
+            }
+            document.getElementById("demo").innerHTML = text;
+            &lt;/script&gt;
+        </pre>
+        <p><b>NOT:</b>Koşulda kullanılan değişkeni artırmayı unutursanız, döngü asla sona ermez. Bu, tarayıcınızı
+            kilitler.</p>
+    </div>
+
+    <div>
+        <h2>Do / While Döngüsü</h2>
+        <p>Döngü sırasında döngünün bir çeşididir. Bu döngü, koşulun doğru olup olmadığını kontrol
+            etmeden önce kod bloğunu bir kez yürütür, ardından koşul doğru olduğu sürece döngüyü tekrarlar.</p>
+        <h5>Uygulama:</h5>
+        <p>
+            Aşağıdaki örnekte bir do/whiledöngü kullanılmıştır. Kod bloğu, koşul test edilmeden önce yürütüldüğünden,
+            koşul yanlış olsa bile her zaman en az bir kez yürütülür:
+        </p>
+        <pre>
+            &lt;script&gt;
+            var text = ""
+            var i = 0;
+            do {
+            text += "&lt;br&gt;The number is " + i;
+            i++;
+            }
+            while (i &lt; 10);  
+            document.getElementById("demo").innerHTML = text;
+            &lt;/script&gt;
+        </pre>
+        <p><b>NOT:</b>Koşulda kullanılan değişkeni artırmayı unutmayın, aksi takdirde döngü asla bitmez!
+        </p>
+
+    </div>
+</body>
+
+</html>

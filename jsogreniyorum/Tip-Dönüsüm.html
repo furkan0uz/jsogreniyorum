@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="head">
+        <header id="header" class="JavaScript">
+            <div>
+            </div>
+            <nav>
+              <ul class="jjs">
+                <li class="js"><a href="JSgiris.html"> JavaScript Giriş</a></li>
+                <li class="js"><a href="Syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+                <li class="js"><a href="Degiskenler.html"> Değişkenler</a>
+               
+                <li class="js"><a href="Operatörler.html">Operatörler</a>
+                </li>
+                <li class="js"><a href="Aritmetik.html">Aritmetik</a></li>
+                <li class="js"><a href="Veritip.html"> Veri Tipleri</a></li>
+                <li class="js"><a href="Fonk.html">Fonksiyon Yapısı</a></li>
+                <li class="js"><a href="Olaylar.html">Olaylar (Events)</a></li>
+                <li class="js"><a href="Sayı-Dizi.html">Stringler, Sayılar, Diziler ve Dizi İşlemler</a></li>
+                <li class="js"><a href="If.html"> If koşul yapıları</a></li>
+                <li class="js"><a href="Döngüler.html">Döngüler</a></li>
+                <li class="js"><a href="Tip-Dönüsüm.html">Tip Dönüşümleri</a></li>
+                <li class="js"><a href="Mimari.html">Çalışma yapısı ve genel mimarisi</a></li>
+                <li class="js"><a href="Dom.html">Dom Yapısı</a></li>
+                <li class="js"><a href="Object.html">JavaScript Object (Model)</a></li>
+                  </ul>
+              </header>
+      </div>
+    <div class="Tip1">
+        <h1>JavaScript Türü Dönüşümü </h1>
+        <p>JavaScript'te değer içerebilen 5 farklı veri türü vardır:</p>
+      
+            <li>string</li>
+            <li>number</li>
+            <li>boolean</li>
+            <li>object</li>
+            <li>function</li>
+       
+        <p>6 tür nesne vardır:</p>
+    
+            <li>Object</li>
+            <li>Date</li>
+            <li>Array</li>
+            <li>String</li>
+            <li>Number</li>
+            <li>Boolean</li>
+      
+        <p>Ve değerler içeremeyen 2 veri türü vardır:</p>
+
+            <li>null</li>
+            <li>undefined</li>
+ 
+    </div>
+
+    <div>
+        <h2>Operatör Türü</h2>
+        <p><b>typeof:</b> Bir JavaScript değişkeninin veri türünü bulmak için operatörü kullanabilirsiniz .</p>
+        <p><b>Lütfen Dikkat:</b></p>
+        <u>
+            <li>NaN veri türü sayıdır</li>
+            <li>Bir dizinin veri türü nesnedir</li>
+            <li>Bir tarihin veri türü nesnedir</li>
+            <li>Null veri türü nesnedir</li>
+            <li>Undefined değişkeninin veri türü undefined *</li>
+            <li>Değer atanmamış bir değişkenin veri türü de tanımsızdır *</li>
+        </u>
+        <p><b>Typeof:</b> Bir JavaScript nesnesinin bir dizi (veya tarih) olup olmadığını belirlemek için
+            kullanamazsınız .</p>
+    </div>
+
+    <div class="Tip2">
+        <h2>Otomatik Tip Dönüştürme</h2>
+        <p>JavaScript "yanlış" bir veri türünde çalışmaya çalıştığında, değeri "doğru" bir türe dönüştürmeye çalışır.
+        </p>
+        <p>Sonuç her zaman beklediğiniz gibi değildir:</p>
+        <p>
+            5 + null // returns 5 because null is converted to 0<br>
+            "5" + null // returns "5null" because null is converted to "null"<br>
+            "5" + 2 // returns "52" because 2 is converted to "2"<br>
+            "5" - 2 // returns 3 because "5" is converted to 5<br>
+            "5" * "2" // returns 10 because "5" and "2" are converted to 5 and 2
+        </p>
+    </div>
+
+    <div>
+        <h2>JavaScript Türü Dönüşüm Tablosu</h2>
+        <p>Bu tabloda, farklı JavaScript değerlerinin Number, String ve Boolean biçimine dönüştürülmesinin sonuçları
+            gösterilmektedir:</p>
+    </div>
+    <div>
+        <table border="2" Width="100%">
+            <thead>
+                <tr>
+                    <th>Orijinal Değer</th>
+                    <th>Dönüştürülmüş Numara (Number)</th>
+                    <th>Dönüştürülmüş String (Dize)</th>
+                    <th>Dönüştürülmüş Boolean</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>false</td>
+                    <td>0</td>
+                    <td>"false"</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>true</td>
+                    <td>1</td>
+                    <td>"true"</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>"0"</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>"1"</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>"0"</td>
+                    <td>0</td>
+                    <td>"0"</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>"000"</td>
+                    <td>0</td>
+                    <td>"000"</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>"1"</td>
+                    <td>1</td>
+                    <td>"1"</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>NaN</td>
+                    <td>NaN</td>
+                    <td>"NaN"</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>Infinity</td>
+                    <td>Infinity</td>
+                    <td>"Infinity"</td>
+                    <td>true</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

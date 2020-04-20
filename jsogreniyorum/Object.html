@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="head">
+        <header id="header" class="JavaScript">
+            <div>
+            </div>
+            <nav>
+              <ul class="jjs">
+                <li class="js"><a href="JSgiris.html"> JavaScript Giriş</a></li>
+                <li class="js"><a href="Syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+                <li class="js"><a href="Degiskenler.html"> Değişkenler</a>
+               
+                <li class="js"><a href="Operatörler.html">Operatörler</a>
+                </li>
+                <li class="js"><a href="Aritmetik.html">Aritmetik</a></li>
+                <li class="js"><a href="Veritip.html"> Veri Tipleri</a></li>
+                <li class="js"><a href="Fonk.html">Fonksiyon Yapısı</a></li>
+                <li class="js"><a href="Olaylar.html">Olaylar (Events)</a></li>
+                <li class="js"><a href="Sayı-Dizi.html">Stringler, Sayılar, Diziler ve Dizi İşlemler</a></li>
+                <li class="js"><a href="If.html"> If koşul yapıları</a></li>
+                <li class="js"><a href="Döngüler.html">Döngüler</a></li>
+                <li class="js"><a href="Tip-Dönüsüm.html">Tip Dönüşümleri</a></li>
+                <li class="js"><a href="Mimari.html">Çalışma yapısı ve genel mimarisi</a></li>
+                <li class="js"><a href="Dom.html">Dom Yapısı</a></li>
+                <li class="js"><a href="Object.html">JavaScript Object (Model)</a></li>
+                  </ul>
+              </header>
+    </div>
+    <div>
+        <h1>JavaScript Object (Model)</h1>
+        <p>Javascript, standart olarak Object adında bir nesne sunar. Oluşturulan nesneler de Object türündedir. Örneğin
+            bir nesnenin oluşturulmasını şu şekilde yapabiliriz.</p>
+        <p>var bankAccount = new Object();</p>
+
+        <p>JavaScript’te nesne oluşturmak için { } süslü parantezler kullanılır.</p>
+        <p>var arac={ };
+            var ogrenci={ };</p>
+        <p>
+            Yukarıdaki şekilde bir tanımlama yapıldığında içinde hiçbir şey bulunmayan arac ve ogrenci nesneleri
+            oluşturulmuş olur.
+
+            Şimdi de oluşturulan nesnelere özellik atamasının nasıl yapılacağına bakalım.
+        </p>
+        <p>
+            var arac={<br>
+            marka:"Renault",<br>
+            model:"Clio",<br>
+            yil:2018,<br>
+            renk:"Beyaz",<br>
+            yakit:"Dizel",<br>
+            saatUcreti:60<br>
+            };
+        </p>
+        <p>Yukarıdaki tanımlamaya baktığımızda;</p>
+        <p>Özellik: değer</p>
+        <p>şeklinde bir atama yapıldığını ve birden fazla özellik eklendiğinde “,” virgül ile ayrıldığını görüyoruz.
+
+            Şimdi aşağıdaki örneği inceleyelim. Örneğimizde arac isimli Object (nesne) tanımlaması ve bu nesneye ait
+            özellik tanımlaması yapılarak bu özelliklerin sayfada yazdırılması sağlanmakta.</p>
+        <p>Not: JavaScript dilinde fonksiyonlar da Nesnedir</p>
+
+        <h3>Constructor(kurucu metod) Kullanılması</h3>
+        <p>ukarıda tanımladığımız nesne oluşturma şeklini tekrar hatırlayalım. Basit haliyle bir nesnenin oluşturulması
+            şu şekildeydi.</p>
+        <p>var bankAccount = {};</p>
+        <p>Bu nesneye bir constructor eklemek istediğimizde ne yapmamız gereken şudur:</p>
+        <p>var bankAccount = function (number, owner, balance){};</p>
+        <p>
+            Bu fonksiyon “{}” parantezlerden hemen önce belirlenmiştir. Javascript ortamında construstor fonksiyonlar
+            property’leri this isimli nesneye atarlar. Javascript ortamındaki constructor fonksiyonlar C# veya Java’daki
+            sınıflara benzerler. Constructor kullanarak yeni bir nesne oluşturup o nesneye
+        </p>
+        <p>
+            var BankAccount = function (number, owner, balance){<br>
+            this.number = number,<br>
+            this.owner = owner,<br>
+            this.balance = balance,<br>
+            this.details = function() {<br>
+            return "Account: " + this.number +<br>
+            " belongs to " + this.owner +<br>
+            "\nBalance: " + this.balance;<br>
+            };<br>
+            };
+        </p>
+        <p>Oluşturduğumuz bu nesneyi şu şeklide kullanabiliriz.</p>
+        <p>var myAccount = new BankAccount(914521, "Bayram Üçüncü", 500);</p>
+        <p>Constructor fonksiyonu tanımladıktan sonra nesne örneğinizi oluşturmak için “new” operatörünü
+            kullanabilirsiniz. Oluşturduğunuz bu nesne örneğinin property’lerine ulaşabilirsiniz.</p>
+        <h2>Nesnelerin Prototiplerinin Kullanılması</h2>
+        <p>Javascript Object tipinde bulunan <b>prototype</b> adlı özel bir metod, tüm nesnelerde bulunur. Bu metod
+            sayesinde
+            nesnelere yeni property veya metodlar ekleyebilirsiniz. Constructor fonksiyonları ile kendi özel tiplerimizi
+            oluşturmamız mümkündür. Oluşturduğumuz tipe ait iki farklı nesne örneği oluşturacağımız vakit her bir nesne
+            örneği kendi property kümesini bünyesinde barındırır. Bu durum, veri tutucu property’ler için makul görünse
+            de metodlar için bir sorun haline gelebilir. Metodlarımızı oluşturduğumuz tip içerisinden ayırabiliriz.</p>
+        <p>Örnek-1: Prototype kullanılmadan</p>
+        <p>
+            var Rectagle = function (x,y) {<br>
+            this.x = x;<br>
+            this.y = y;<br>
+            this.Area = function() { return x*y; };<br>
+            };
+        </p>
+        <p>Örnek-2: Prototype kullanarak</p>
+        <p>
+            var Rectangle = function (x, y) {<br>
+            this.x = x;<br>
+            this.y = y;<br>
+            };<br>
+            Rectangle.prototype = {<br>
+            Area: function() { return (this.x * this.y); }br };
+        </p>
+        <p>Örnek-2 de alan hesaplayıcı metod olan Area metodu Örnek-2 de tipin prototype metoduna tanımlanmıştır. Bu
+            bize ne fayda sağlamıştır? Örnek-1 de constructor içinde tanımlanan fonksiyon için her Rectangle nesnesi
+            oluşturulduğunda bellekte anonim bir fonksiyon oluşturulacak ve yer tutacak. Ancak Örnek-2 de durum farklı
+            olacaktır. Prototype property’ler static olduklarından her Rectangle nesnesi prototype içine tanımlanan
+            metodları referans olarak görecektir. Ayrıca Rectange tipine ait değer tutucu (x,y) üyeler ve fonksiyonlar
+            ayrılmış oldu. Bu ayrımı farklı Javascript dosyalarına bile dağıtmak mümkündür. Prototype kullanımı
+            öncelikli olarak performans artışı sağlamakla birlikte kodun okunabilirliğini de arttırmak açısından faydalı
+            olmaktadır.</p>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="head">
+        <header id="header" class="JavaScript">
+            <div>
+            </div>
+            <nav>
+              <ul class="jjs">
+                <li class="js"><a href="JSgiris.html"> JavaScript Giriş</a></li>
+                <li class="js"><a href="Syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+                <li class="js"><a href="Degiskenler.html"> Değişkenler</a>
+               
+                <li class="js"><a href="Operatörler.html">Operatörler</a>
+                </li>
+                <li class="js"><a href="Aritmetik.html">Aritmetik</a></li>
+                <li class="js"><a href="Veritip.html"> Veri Tipleri</a></li>
+                <li class="js"><a href="Fonk.html">Fonksiyon Yapısı</a></li>
+                <li class="js"><a href="Olaylar.html">Olaylar (Events)</a></li>
+                <li class="js"><a href="Sayı-Dizi.html">Stringler, Sayılar, Diziler ve Dizi İşlemler</a></li>
+                <li class="js"><a href="If.html"> If koşul yapıları</a></li>
+                <li class="js"><a href="Döngüler.html">Döngüler</a></li>
+                <li class="js"><a href="Tip-Dönüsüm.html">Tip Dönüşümleri</a></li>
+                <li class="js"><a href="Mimari.html">Çalışma yapısı ve genel mimarisi</a></li>
+                <li class="js"><a href="Dom.html">Dom Yapısı</a></li>
+                <li class="js"><a href="Object.html">JavaScript Object (Model)</a></li>
+                  </ul>
+              </header>
+      </div>
+    <div>
+        <h1>JavaScript Koşul İfadeleri</h1>
+        <p>Farklı durumlarda farklı işlemler yapmak gerekebilir. Bu durumların tespit edilmesi için koşul ifadeleri bize
+            yardımcı olur.</p>
+        <p>Şartların sağlanıp sağlanılmadığını tespit ederken standart üç ifade kullanılır. Bunlar if, else if ve
+            else'dir. Örneği inceleyelim;</p>
+        <pre>
+            var mesaj = "";
+            var saat = 5;
+            if ( saat &lt; 10 )
+            {
+                mesaj = "İyi sabahlar";
+            }
+            else if ( saat &lt; 20 )
+            {
+                mesaj = "İyi günler";
+            }
+            else
+            {
+                mesaj = "İyi akşamlar";
+            }
+           </pre>
+        <p>
+            Örnekte saat değişkeni 5 olarak belirtilmiştir. Bu değişkenin sayısal değerine göre mesaj değişkeninin
+            şekillenmesi isteniyor. Eğer saat 10'dan küçükse "İyi sabahlar", eğer 20'den küçükse "İyi günler", hiçbiri
+            değilse "İyi akşamlar" demesi sağlanıyor. Dikkatli incelendiğinde parantez içerisinde koşullara yer
+            veriliyor.
+        </p>
+       
+            <li>if ( koşul sağlanıyorsa ) { şunları yap }</li>
+            <li>else if ( koşul sağlanıyorsa ) { şunları yap }</li>
+            <li>else { şunları yap }</li>
+       
+        <p>Koşul oluştururken mutlaka IF ile başlanır. Parantez içinde koşul belirtilir ve yapılacaklar kıvrımlı
+            parantez içinde yazılır.</p>
+        <p>ELSE IF kullanmak için öncelikle IF kullanmış olmak gereklidir. Yani IF kullanmadan ELSE IF ile bir kontrol
+            yapılamaz. "O olmadı bari bunu dene" anlamı taşır.</p>
+        <p>ELSE kullanırken parantez açılmaz ve koşul yazılmaz. ELSE, diğer tüm if ve else ifler çalışmadıysa, yani
+            hiçbir koşul sağlanılamadıysa yapılacak şeyi belirtir.</p>
+    </div>
+
+    <div>
+        <h2>Koşul İfadelerini Tek Satırda Kullanmak</h2>
+        <p>JavaScriptte koşul ifadelerinde if kullanmak yerine tek satırda ( koşul ) ? doğruysa : yanlışsa; yapısını da
+            kullanabiliriz. Aşağıdaki iki kullanım da aynı işi görecektir;
+        </p>
+        <h5>Uygulama 1:</h5>
+        <pre>
+            var mesaj = "Yaşınız 18'den ";
+            if ( yas &gt;= 18 )
+            {
+            mesaj += "büyük!";
+            }
+            else
+            {
+            mesaj += "küçük!";
+            }
+        </pre>
+        <h5>Uygulama 2:</h5>
+        <pre>
+            var yas = 19;
+            var mesaj = "Yaşınız 18'den ";
+            mesaj += ( yas >= 18 ) ? "büyük!" : "küçük
+        </pre>
+    </div>
+</body>
+
+</html>

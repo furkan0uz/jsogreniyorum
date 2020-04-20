@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="head">
+        <header id="header" class="JavaScript">
+            <div>
+            </div>
+            <nav>
+              <ul class="jjs">
+                <li class="js"><a href="JSgiris.html"> JavaScript Giriş</a></li>
+                <li class="js"><a href="Syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+                <li class="js"><a href="Degiskenler.html"> Değişkenler</a>
+               
+                <li class="js"><a href="Operatörler.html">Operatörler</a>
+                </li>
+                <li class="js"><a href="Aritmetik.html">Aritmetik</a></li>
+                <li class="js"><a href="Veritip.html"> Veri Tipleri</a></li>
+                <li class="js"><a href="Fonk.html">Fonksiyon Yapısı</a></li>
+                <li class="js"><a href="Olaylar.html">Olaylar (Events)</a></li>
+                <li class="js"><a href="Sayı-Dizi.html">Stringler, Sayılar, Diziler ve Dizi İşlemler</a></li>
+                <li class="js"><a href="If.html"> If koşul yapıları</a></li>
+                <li class="js"><a href="Döngüler.html">Döngüler</a></li>
+                <li class="js"><a href="Tip-Dönüsüm.html">Tip Dönüşümleri</a></li>
+                <li class="js"><a href="Mimari.html">Çalışma yapısı ve genel mimarisi</a></li>
+                <li class="js"><a href="Dom.html">Dom Yapısı</a></li>
+                <li class="js"><a href="Object.html">JavaScript Object (Model)</a></li>
+                  </ul>
+              </header>
+      </div>
+    <div>
+        <h1>JavaScript Sayı Yöntemleri</h1>
+        <h2>Sayı Yöntemleri ve Özellikleri</h2>
+        <p>Sayı yöntemleri sayılarla çalışmanıza yardımcı olur.
+            İlkel değerler (3.14 veya 2014 gibi), özelliklere ve yöntemlere sahip olamaz (çünkü bunlar nesne değildir).
+        </p>
+        <p>
+            Ancak JavaScript ile, ilkel değerler için yöntemler ve özellikler de kullanılabilir, çünkü JavaScript ilkel
+            değerleri yöntemler ve özellikleri yürütürken nesneler olarak ele alır.
+        </p>
+    </div>
+
+    <div>
+        <h2>ToString () Yöntemi</h2>
+        <p><b>toString() :</b> Yöntem bir dize olarak bir sayı döndürür. </p>
+        <p>
+            Tüm sayı yöntemleri herhangi bir sayı türünde kullanılabilir (değişmez değerler, değişkenler veya ifadeler):
+        </p>
+        <p>
+            var x = 123;<br>
+            x.toString(); // returns 123 from variable x<br>
+            (123).toString(); // returns 123 from literal 123<br>
+            (100 + 23).toString(); // returns 123 from expression 100 + 23
+        </p>
+    </div>
+
+    <div>
+        <h2>ToExponential () Yöntemi</h2>
+        <p><b>toExponential():</b> Üstel gösterim kullanılarak yuvarlanmış ve yazılmış bir sayı içeren bir dize
+            döndürür.</p>
+        <p>Bir parametre, ondalık noktasının arkasındaki karakter sayısını tanımlar:</p>
+        <p>
+            var x = 9.656;<br>
+            x.toExponential(2); // returns 9.66e+0<br>
+            x.toExponential(4); // returns 9.6560e+0<br>
+            x.toExponential(6); // returns 9.656000e+0
+        </p>
+        <p>Parametre isteğe bağlıdır. Belirtmezseniz, JavaScript sayıyı yuvarlamaz.</p>
+    </div>
+
+    <div>
+        <h2>ParseInt () Yöntemi</h2>
+        <p><b>parseInt():</b> Bir dizeyi ayrıştırır ve bir tamsayı döndürür. Boşluklara izin verilir. Yalnızca ilk sayı
+            döndürülür.</p>
+        <p>
+            parseInt("10"); // returns 10<br>
+            parseInt("10.33"); // returns 10<br>
+            parseInt("10 20 30"); // returns 10<br>
+            parseInt("10 years"); // returns 10<br>
+            parseInt("years 10"); // returns NaN
+        </p>
+        <p><b>Sayı dönüştürülemezse, NaN(Sayı Değil) döndürülür.</b></p>
+    </div>
+
+    <div>
+        <h2>ParseFloat () Yöntemi</h2>
+        <p><b>parseFloat():</b> Bir dizeyi ayrıştırır ve bir sayı döndürür. Boşluklara izin verilir. Yalnızca ilk sayı
+            döndürülür.</p>
+    </div>
+
+    <div>
+        <h1>JavaScript Dizileri</h1>
+        <p>JavaScript dizileri, birden çok değeri tek bir değişkende depolamak için kullanılır.</p>
+        <p>var cars = ["Saab", "Volvo", "BMW"];</p>
+    </div>
+
+    <div>
+        <h2>Dizi Nedir?</h2>
+        <p>
+            Dizi, aynı anda birden fazla değeri tutabilen özel bir değişkendir.
+            Bir öğe listeniz varsa (örneğin, araba isimleri listesi), arabaları tek değişkenlerde saklamak şöyle
+            görünebilir:<br>
+            var car1 = "Saab";<br>
+            var car2 = "Volvo";<br>
+            var car3 = "BMW";<br>
+            Ancak, ya arabalar arasında dolaşıp belirli bir tane bulmak istiyorsanız? Peki ya 3 değil, 300 arabanız
+            olsaydı?<br>
+            Çözüm bir dizi!<br>
+            Bir dizi, tek bir ad altında birçok değeri tutabilir ve değerlere bir dizin numarasına başvurarak
+            erişebilirsiniz.
+        </p>
+    </div>
+
+    <div>
+        <h2>Dizi Oluşturma</h2>
+        <p>Bir dizi değişmezi kullanmak, bir JavaScript Dizisi oluşturmanın en kolay yoludur.</p>
+        <p><b>Sözdizimi:</b> <br>
+            var array_name =[item1, item2, ...];</p>
+    </div>
+
+    <div>
+        <h2>Dizinin Elemanlarına Erişme</h2>
+        <p>
+            Bir dizi öğesine dizin numarasına bakarak erişirsiniz .<br>
+            <b>cars:</b> Bu ifade, şu öğedeki ilk öğenin değerine erişir.
+        </p>
+        <p>
+            var cars = ["Saab", "Volvo", "BMW"];<br>
+            document.getElementById("demo").innerHTML = cars[0];
+        </p>
+        <p><b>NOT:</b> Dizi dizinleri 0 ile başlar. [0] ilk elementtir. [1] ikinci elementtir.</p>
+    </div>
+
+    <div>
+        <h2>Dizi Özellikleri ve Yöntemleri</h2>
+        <p>JavaScript dizilerinin gerçek gücü yerleşik dizi özellikleri ve yöntemleridir:</p>
+        <h5>Örnek:</h5>
+        <p>
+            var x = cars.length;   // The length property returns the number of elements<br>
+            var y = cars.sort();   // The sort() method sorts arrays
+        </p>
+    </div>
+    <div>
+        <h2>Length Özelik</h2>
+        <p><b>Length:</b> Bir dizinin özelliği, bir dizi (dizi elemanlarının sayısı) uzunluğu ile döner.</p>
+        <p>
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+            fruits.length;   // the length of fruits is 4
+        </p>
+        <p><b>NOT:</b> length özelliği her zaman en yüksek dizi indeksi birden fazlasıdır.</p>
+    </div>
+
+    <div>
+        <h2>Diziler Ne Zaman Kullanılmalı?</h2>
+    
+            <li>JavaScript ilişkilendirilebilir dizileri desteklemez.</li>
+            <li>Öğe adlarının dize (metin) olmasını istediğinizde nesneleri kullanmalısınız .</li>
+            <li>Öğe adlarının sayı olmasını istediğinizde diziler kullanmalısınız .</li>
+       
+    </div>
+</body>
+
+</html>

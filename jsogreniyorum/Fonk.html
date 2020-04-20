@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="head">
+        <header id="header" class="JavaScript">
+            <div>
+            </div>
+            <nav>
+              <ul class="jjs">
+                <li class="js"><a href="JSgiris.html"> JavaScript Giriş</a></li>
+                <li class="js"><a href="Syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+                <li class="js"><a href="Degiskenler.html"> Değişkenler</a>
+               
+                <li class="js"><a href="Operatörler.html">Operatörler</a>
+                </li>
+                <li class="js"><a href="Aritmetik.html">Aritmetik</a></li>
+                <li class="js"><a href="Veritip.html"> Veri Tipleri</a></li>
+                <li class="js"><a href="Fonk.html">Fonksiyon Yapısı</a></li>
+                <li class="js"><a href="Olaylar.html">Olaylar (Events)</a></li>
+                <li class="js"><a href="Sayı-Dizi.html">Stringler, Sayılar, Diziler ve Dizi İşlemler</a></li>
+                <li class="js"><a href="If.html"> If koşul yapıları</a></li>
+                <li class="js"><a href="Döngüler.html">Döngüler</a></li>
+                <li class="js"><a href="Tip-Dönüsüm.html">Tip Dönüşümleri</a></li>
+                <li class="js"><a href="Mimari.html">Çalışma yapısı ve genel mimarisi</a></li>
+                <li class="js"><a href="Dom.html">Dom Yapısı</a></li>
+                <li class="js"><a href="Object.html">JavaScript Object (Model)</a></li>
+                  </ul>
+              </header>
+      </div>
+    <div>
+       
+        <h1>JavaScript'te Fonksiyonlar</h1>
+        <p>Fonksiyonlar bir işlevi yerine getiren kod bloklarıdır. Eğer bir projede birden fazla sayfada ya da yerde
+            çalışmasını istediğimiz kodlar varsa imdadımıza fonksiyonlar yetişir. JavaScript'in nesne tabanlı
+            (object-oriented) bir dil olmasından kaynaklı olarak belirli olayların gerçekleşmesini sağlamak için
+            fonksiyonları kullanabiliriz.</p>
+        <p>Fonksiyonlar hazır ve kullanıcı tanımlı olmak üzere iki temel sınıfa ayrılırlar. Diğer bir sınıflama yöntemi
+            ise parametreli ya da parametresiz olmalarıdır. Şimdi parametresiz fonksiyonlarla yavaş yavaş fonksiyonları
+            öğrenmeye başlayalım.</p>
+    </div>
+
+    <div>
+        <h2>Parametresiz Fonksiyonlar</h2>
+        <p>Parametresiz fonksiyonlar adından da anlaşılacağı gibi herhangi bir parametreye gerek duymadan ve fonksiyonda
+            tanımlanan kodların yerine getirilmesi ile çalışan fonksiyonlardır.</p>
+        <pre>
+                &lt;script&gt;
+                var kullaniciSayisi1 = prompt("Lütfen ilk sayıyı giriniz:", "");
+                var kullaniciSayisi2 = prompt("Lütfen ikinci sayıyı giriniz:", "");
+                alert(parseInt(kullaniciSayisi1) + parseInt(kullaniciSayisi2));
+                &lt;/script&gt;
+            </pre>
+        <p>Şeklinde kodlarımız olsun. Kodu çalıştırdığımızda ilk sayı için bir bilgi penceresi, ilk sayıyı girdikten
+            sonra ise ikinci sayı için bir bilgi penceresi açılacak. İkinci sayıyı girdikten sonra ise sonuç, uyarı
+            penceresi olarak yazdırılacak. parseInt( ) ise prompt fonksiyonu ile alınan string veriyi number veri türüne
+            çevirecek. Unutulmamalıdır ki kullanıcıdan alınan veriler daima string türündedir.</p>
+        <p>Diyelim ki bu kodları bu sayfada kullandık. Fakat başka bir sayfada da kullanmak istiyoruz. Bunun için sil
+            baştan üç satır kodu tekrar yazmayız. Fonksiyonumuzu tanımlarız ve kendi oluşturduğumuz js dosyasına yazarız
+            ve js dosyasını da layout'umuza ekleriz. İşler bu şekilde yürüyor.</p>
+        <h5>Uygulama:</h5>
+        <pre>
+                &lt;script&gt;
+                function topla() {
+                var kullaniciSayisi1 = prompt("Lütfen ilk sayıyı giriniz:", "");
+                var kullaniciSayisi2 = prompt("Lütfen ikinci sayıyı giriniz:", "");
+                alert(parseInt(kullaniciSayisi1) + parseInt(kullaniciSayisi2));
+                }
+                topla();
+                &lt;/script&gt;  
+            </pre>
+        <p>İşte fonksiyon tanımlamak bu kadar basit. function yazdıktan sonra fonksiyon adımı verdim ve scope alanına
+            çalışmasını istediğim kodları yazdım. Sonrasında da topla() fonksiyonumu çalıştırdım. Fonksiyonumu dahili
+            bir js dosyasında tanımlarsam projemin istediğim sayfasında kullanabilirim.</p>
+    </div>
+
+    <div>
+        <h2>Parametreli Fonksiyonlar</h2>
+        <p>Kod yazarken iki değeri kısa bir şekilde toplamak istiyoruz diyelim. Ve bu kodları başka sayfalarda da
+            kullanacağız. Bunun için aşağıdaki gibi parametreli bir fonksiyon tanımlamamız yeterlidir. </p>
+        <pre>
+              &lt;script&gt;
+              function topla(ilkSayi, ikinciSayi) {
+              alert(Number(ilkSayi) + Number(ikinciSayi));
+              }
+              topla("4", "5");
+              &lt;/script&gt;    
+         </pre>
+        <p>ilkSayi ve ikinciSayi şeklinde iki parametresi olan topla isimli bir fonksiyon tanımladım. Number( )
+            fonksiyonu ile bu iki parametreyi number veri türüne çevirdim. Kodlarımı çalıştırdığım zaman "9" yanıtını
+            alacağım.</p>
+        <pre>
+             &lt;script&gt;
+             function topla(ilkSayi, ikinciSayi) {
+             alert(ilkSayi + ikinciSayi);
+             }
+             topla(4, 5);
+             &lt;/script&gt; 
+        </pre>
+        <p>Bu kodları daha kısa bir şekilde de yazabilirim. Sadece Number( ) fonksiyonunu öğrenmeniz amacıyla ilk örneği
+            verdim.</p>
+    </div>
+
+    <div>
+        <h2>Return Deyimi</h2>
+        <p>Bazen kodlarımızda çalışmasını istemediğimiz alanlar olabilir. Hatırlarsanız bir önceki dersimizde continue
+            deyimini kullanmıştık. continue'da çalışmasını istemediğimiz kodlar çalışmaz; fakat geri kalan kodlar
+            çalışır. return'de ise kodların çalışmasını istemediğimiz kısmına gelindiğinde fonksiyondan çıkılır ve
+            altındaki kodları çalıştırmaz. Aralarında böyle bir fark vardır.</p>
+        <pre>
+            &lt;script&gt;
+            function farkHesaplama(ilk,son) {
+            if (ilk &lt; son) {
+            return;
+            } else {
+            alert(ilk - son);
+            }
+          }
+           farkHesaplama(15, 20);
+           &lt;/script&gt;   
+        </pre>
+        <p>Fark hesabı yapan bir fonksiyon yazdım. Eğer ilk değer, ikinci değerden küçükse fonksiyondan çıkacağım.
+            Değilse sonu yazdıracağım.</p>
+        <pre>
+            &lt;script&gt;
+            function farkHesaplama(ilk,son) {
+            if (ilk &lt; son) {
+            alert("İlk değer ikinci değerden küçüktü.");
+            return;
+            } else {
+            alert(ilk - son);
+          }
+         }
+            farkHesaplama(15, 20);
+            &lt;/script&gt;
+        </pre>
+        <p>Bu fonksiyonu bu şekilde bir uyarıyla da yazabilirsiniz.</p>
+    </div>
+
+    <div>
+        <h2>Hazır Fonksiyonlar</h2>
+        <p>Bu dersimize kadar write( ), alert( ), prompt( ), sup( ), concat( ) gibi birçok hazır fonksiyon gördük. Hazır
+            fonksiyonlar kod yazımında kolaylık sağlayan JavaScript ile hazır gelen fonksiyon gruplarıdır. Şimdi birkaç
+            tanesini daha öğrenelim.</p>
+        <h6>eval( ): </h6> <p>Değişkenin türünü algılayıp dönüştürme (convert) işlemi yapar.</p>
+        <pre>
+            &lt;script&gt;
+            var a = 12;
+            var b = "8";
+            document.write(a + eval(b));
+            &lt;/script&gt; 
+        </pre>
+        <p>a değişkenim number, b değişkenim ise string veri türünde. eval( ) fonksiyonu ile iki değeri topladığımda
+            "20" yanıtını aldım. eval( ), b değişkeninin bir string olduğunu anladı ve onu number veri türüne çevirdi.
+            Eğer eval( ) kullanmasaydım "128" yanıtını alacaktım ve sadece string birleştirme yapmış olacaktı.</p>
+        <h6>parseInt( ) ve parseFloat:</h6> <p> parseInt( ) veriyi integer türüne yani tamsayı türüne dönüştürür. parseFloat(
+        ) ise ondalıklı sayıya dönüştürme işlemi yapar.</p><br>
+        <h6>String( ) ve Number( ):</h6> <p>
+        String( ) veriyi string türüne, Number( ) ise number türüne dönüştürür.</p>
+    </div>
+</body>
+
+</html>

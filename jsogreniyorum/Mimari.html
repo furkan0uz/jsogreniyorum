@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="head">
+        <header id="header" class="JavaScript">
+            <div>
+            </div>
+            <nav>
+              <ul class="jjs">
+                <li class="js"><a href="JSgiris.html"> JavaScript Giriş</a></li>
+                <li class="js"><a href="Syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+                <li class="js"><a href="Degiskenler.html"> Değişkenler</a>
+               
+                <li class="js"><a href="Operatörler.html">Operatörler</a>
+                </li>
+                <li class="js"><a href="Aritmetik.html">Aritmetik</a></li>
+                <li class="js"><a href="Veritip.html"> Veri Tipleri</a></li>
+                <li class="js"><a href="Fonk.html">Fonksiyon Yapısı</a></li>
+                <li class="js"><a href="Olaylar.html">Olaylar (Events)</a></li>
+                <li class="js"><a href="Sayı-Dizi.html">Stringler, Sayılar, Diziler ve Dizi İşlemler</a></li>
+                <li class="js"><a href="If.html"> If koşul yapıları</a></li>
+                <li class="js"><a href="Döngüler.html">Döngüler</a></li>
+                <li class="js"><a href="Tip-Dönüsüm.html">Tip Dönüşümleri</a></li>
+                <li class="js"><a href="Mimari.html">Çalışma yapısı ve genel mimarisi</a></li>
+                <li class="js"><a href="Dom.html">Dom Yapısı</a></li>
+                <li class="js"><a href="Object.html">JavaScript Object (Model)</a></li>
+                  </ul>
+              </header>
+      </div>
+
+    <div>
+        <h1>Çalışma Prensibi ve Mimarisi</h1>
+        <p>Javascript kodlama da kodlama yoğunluğu genelde fazladır. Kodlar genelde üstten alta doğru sıralanarak
+            yazılır ve sunucu da tarayıcı da kodları bu şekilde sıraya dizerek yorumlar.</p>
+        <pre>
+                &lt;script&gt;
+                var x,y, z;
+                x = 10;
+                y = 20;
+                z = x + y;
+                document.write(z);
+                &lt;/script&gt;
+            </pre>
+        <p>Yukarıda verilen örnekte x, y, değişkenleri tanımlanarak bu değişkenlere sayısal değerler atanarak z
+            değişkeninde bu iki değer toplanmış ve ekrana “document write()” komutu ile yazdırılmıştır</p>
+    </div>
+
+    <div>
+        <h2>Javascript İle Kodları Birbirinden Ne İle Ayırırız?</h2>
+        <p>Tüm programlama dillerinde olduğu gibi kod bloklarının birbirleri ile çakışmasını önlemek için belirli
+            ayraçlar kullanılır. Javascriptte de kod parçacığını bir diğerinden ayırmak ve hataya mahal vermemek için
+            noktalı virgül kullanılır (;).</p>
+        <pre>
+                &lt;script&gt;
+                var x,y, z;
+                x = 10;
+                y = 20;
+                z = x + y;
+                document.write(z);
+                &lt;/script&gt;
+        </pre>
+        <p>Yukarıdaki örnekte olduğu gibi, var ile x, y, z değişkenleri tanımlanmış ve buraya kadar olan kısmın ayrı
+            yorumlanması için noktalı virgül ile bitirilmiş. Devamındaki değişkenler de değer aldıktan sonra noktalı
+            virgül ile bitirilmişler ve document.write komutu da aynı şekilde işlevini tamamlayabilmek için noktalı
+            virgül ile kapatılmış.</p>
+    </div>
+
+    <div>
+        <h2>Javascript'te Boşluk Kullanımı</h2>
+        <p>Javascript kodladığınızda bırakacağınız boşlukların bir önemi yoktur.</p>
+        <p>
+            meslek = "manav kamil";<br>
+            meslek="manav kamil";
+        </p>
+        <p>Yukarıdaki örneği incelediğinizde ilk meslek değişkeninden sonra boşluk eşittir işareti ve boşluk değişken
+            tanımı var. Aşağıdaki örnekte o boşluklar yok. İki örnekte düzgün çalışacaktır.</p>
+    </div>
+
+    <div>
+        <h2>Javascript Kod Uzunluğu</h2>
+        <p>Javascript kodlarının uzun olması okumayı ve anlamayı zorlaştıracaktır bu yüzden, satırlara ayırarak yazmak
+            her zaman daha kullanışlıdır.</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="head">
+        <header id="header" class="JavaScript">
+            <div>
+            </div>
+            <nav>
+              <ul class="jjs">
+                <li class="js"><a href="JSgiris.html"> JavaScript Giriş</a></li>
+                <li class="js"><a href="Syntax.html">JavaScript Yazılım (Syntax) yapısı</a></li>
+                <li class="js"><a href="Degiskenler.html"> Değişkenler</a>
+               
+                <li class="js"><a href="Operatörler.html">Operatörler</a>
+                </li>
+                <li class="js"><a href="Aritmetik.html">Aritmetik</a></li>
+                <li class="js"><a href="Veritip.html"> Veri Tipleri</a></li>
+                <li class="js"><a href="Fonk.html">Fonksiyon Yapısı</a></li>
+                <li class="js"><a href="Olaylar.html">Olaylar (Events)</a></li>
+                <li class="js"><a href="Sayı-Dizi.html">Stringler, Sayılar, Diziler ve Dizi İşlemler</a></li>
+                <li class="js"><a href="If.html"> If koşul yapıları</a></li>
+                <li class="js"><a href="Döngüler.html">Döngüler</a></li>
+                <li class="js"><a href="Tip-Dönüsüm.html">Tip Dönüşümleri</a></li>
+                <li class="js"><a href="Mimari.html">Çalışma yapısı ve genel mimarisi</a></li>
+                <li class="js"><a href="Dom.html">Dom Yapısı</a></li>
+                <li class="js"><a href="Object.html">JavaScript Object (Model)</a></li>
+                  </ul>
+              </header>
+      </div>
+    <div>
+       
+        <h1>Aritmetik İşlemler</h1>
+        <hr>
+        <p>VB Script ile Java Script'in işlem işaretleri biraz farklı. Bu farklar Visual Basic ile Java (veya C)
+            arasında da aynı şekildedir.Bu sayfada aritmetik işlemler ve öncelik sıraları yer almaktadır.</p>
+    </div>
+    <div>
+        <h4>Aritmetik İşlem İşaretleri ve Öncelik Sıralaması</h4>
+        <p>JavaScript'te yer alan aritmetik işaretlerin bir kısmı:</p>
+        <p>
+            <b>+:</b> Toplama işlemini yapar.
+            sayi = 10 + 5 (Not: sayi=15 olur)<br>
+            <b>-:</b> Çıkartma işlemini yapar.
+            sayi= 10 - 5 (Not: sayi=5 olur)<br>
+            <b>*:</b> Çarpma işlemini yapar.
+            sayi = 10 * 3 (Not: sayi=30 olur)<br>
+            <b>/:</b> Bölme işlemi yapar.
+            sayi= 10 / 3 (Not: sayi=3.3333333333333335 olur)<br>
+            <b>%:</b> Tamsayılı bölme işlemi yapar ve kalanı verir.
+            sayi=10 % 3 (Not: sayi=1 olur)
+        </p>
+        <p>
+            Bu işlemlerde çarpma, bölme ve kalanlı bölme işlemlerinin toplama ve çıkarma işlemine göre önceliği vardır.
+            Bir işlemde eğer hiç parantez yoksa, soldan sağa doğru sırasıyla çarpma ve bölme işlemleri yapılır. Bu
+            prensip her bilgisayar dilinde ve hesap makinelerinde de geçerlidir. Aşağıdaki örneklere bakalım.
+        </p>
+        <b>örn1:</b>
+        <b>sayi = 5 * 6 - 10 / 5</b>
+        <p>Bu işlemde çarpma önceliği - işaretine göre daha fazla olan * ve / işlemleri yapılır. (* ve / işlemlerinin
+            önceliği aynıdır.) Bu durumda sayi = 30 - 2 = 28 olur.</p>
+        <b>örn2:</b>
+        <b>sayi = 5 * 6 / 10 * 2 + 4 * 3</b>
+        <p>Bu işlemde önceliği aynı olan çarpma ve bölme işlemleri birarada yer alıyor. Bu durumda işlemler sırayla
+            yapılır. Önce 5 ile 6 çarpılır, çıkan sonuç 10'a bölünür ve çıkan sonuç 2 ile çarpılır. Ve sayi = 6 + 12 =
+            18 sonucuna ulaşılır.</p>
+        <b>örn3:</b>
+        <b>sayi = ((5 * 6) / (10 * 2) + 4) * 3</b>
+        <p>Bu işlemde parantezler söz konusu. Ve her zaman parantezlerin önceliği vardır. İlk önce iki iç parantez
+            içindeki işlemleri, sonra büyük parantez içindeki işlemleri yaparız. Böylece sayi = (30 / 20 + 4) * 3 = (5.5
+            + 4) * 3 = 9.5 * 3 = 28.5 sonucunu elde ederiz.</p>
+    </div>
+
+    <div>
+        <h4>Değişken Değerini Taşıdığı Değere Göre Değiştirme</h4>
+        <p>Bazen değişkenlerin değerini, kendisiyle işlem yaparak değiştirebiliriz. Örneğin:</p>
+        <p>
+            <b>var</b> sayi=5<br>
+            <b>sayi</b>= sayi+1 <u>Bu durumda sayi= 5+1=6 olur.</u><br>
+            <b>var</b> sayi=4<br>
+            <b>sayi</b>= sayi-1 <u>Bu durumda sayi = 4 - 1 = 3 olur.</u><br>
+            <b>var</b> sayi=6<br>
+            <b>sayi</b>= sayi*5 <u>Bu durumda sayi = 6 * 5 = 30 olur.</u><br>
+            <b>var</b> sayi=10<br>
+            <b>sayi</b> sayi/2 <u>Bu durumda sayi = 10 / 2 = 5 olur.</u><br>
+            <b>var</b> sayi=10<br>
+            <b>sayi</b>= sayi%4 <u>Bu durumda sayi = 10 % 4 = 2 olur.</u>
+        </p>
+        <p>Bu işlemleri şu işaretlerle de yapabiliriz: "+=", "-=", "*=", "/=" ve "%=". Aşağıdaki işlemler birbiriyle
+            aynı sonucu verir.</p>
+        <hr>
+    </div>
+
+        <div>
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>İşlemler</th>
+                        <th>Eşit Mi?</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>sayi += 5</td>
+                        <td>eşittir</td>
+                        <td>sayi = sayi + 5</td>
+                    </tr>
+                    <tr>
+                        <td>sayi -= 4</td>
+                        <td>eşittir</td>
+                        <td>sayi = sayi - 4</td>
+                    </tr>
+                    <tr>
+                        <td>sayi *= 6</td>
+                        <td>eşittir</td>
+                        <td>sayi = sayi * 6</td>
+                    </tr>
+                    <tr>
+                        <td>sayi /= 2</td>
+                        <td>eşittir</td>
+                        <td>sayi = sayi / 5</td>
+                    </tr>
+                    <tr>
+                        <td>sayi %= 4</td>
+                        <td>eşittir</td>
+                        <td>sayi = sayi % 4</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Bu aritmetik işlemler C ve Java'da da aynı şekilde kullanılmaktadır. Bu işaretlerin yanında, özelleşmiş
+                iki işaret daha vardır: ++, --.
+            </p>
+            <table border="1" width="100%">
+                    <thead>
+                        <tr>
+                            <th>İşlemler</th>
+                            <th>Eşit Mi?</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>sayi++</td>
+                            <td>eşittir</td>
+                            <td>sayi = sayi + 1</td>
+                        </tr>
+                        <tr>
+                            <td>sayi--</td>
+                            <td>eşittir</td>
+                            <td>sayi = sayi - 1</td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+
+        <h5>Uygulama:</h5>
+        <pre>
+            &lt;html&gt;
+            &lt;head&gt;
+            &lt;title&gt;JavaScript Uygulaması&lt;/title&gt;   
+            &lt;/head&gt;
+            &lt;body&gt;
+
+            &lt;script language="JavaScript"&gt;
+            var en1=5, boy1=10, dortgen1
+            var en2, boy2, dorgen2
+            dortgen1= en1 * boy1
+            boy1++
+            en1++
+            boy2 = boy1
+            en2 = en1
+            dortgen2= en2 * boy2
+            document.write("Eni 5, boyu 10 cm olan bir dörtgenin alanı = " + dortgen1 +" cm&lt;sup&gt;2&lt;/sup&gt; 'dir.&lt;br&gt;")
+            document.write("Eni ve boyu 1'er cm artırılırsa dörtgenin alanı = " + dortgen2 +" cm&lt;sup&gt;2&lt;/sup&gt; oluyor.")
+            &lt;/script&gt;
+
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+        <p>İşlem önceliğini daha iyi anlatan bir başka uygulama yapalım. Aşağıdaki değerleri tahmin etmeye çalışın.</p>
+            <pre>
+             &lt;html&gt;
+             &lt;head&gt;
+             &lt;title&gt;JavaScript Uygulaması&lt;/title&gt;   
+             &lt;/head&gt;
+             &lt;body&gt;
+
+             &lt;script language="JavaScript"&gt;
+             var gelir=25000, maliyet=12000
+             var vergiorani=0.15, amortismanorani=0.10
+             var amortisman, vergi
+             vergi = (gelir - maliyet) * (1 - amortismanorani) * vergiorani
+             amortisman = (gelir - maliyet) * amortismanorani
+             document.write("Şirketimizin yıllık vergisi = " + vergi +" TL'dir.&lt;br&gt;")
+             document.write("Şirketimizin yıllık amortismanı = " + amortisman + "TL'dir.")
+             &lt;/script&gt;
+
+             &lt;/body&gt;
+             &lt;/html&gt;
+            </pre>
+</body>
+
+</html>

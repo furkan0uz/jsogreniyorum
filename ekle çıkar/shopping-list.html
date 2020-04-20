@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shopping-list.css">
+</head>
+
+<body>
+    <div id="myDIV" class="header">
+      
+        <h1>Balık Listesi</h1>
+        <input type="text" id="myInput" placeholder="Ürün Ekle">
+        <span onclick="newElement()" class="addBtn">Ekle</span>
+        <span onclick="deleteAllElement()" class="delBtn">Tümünü Sil</span>
+    </div>
+
+    <br>
+    <ul id="myUL">
+        <li>Hamsi</li>
+        <li class="checked">Levrek</li>
+        <li>Çipura</li>
+        <li>Somon</li>
+        
+    </ul>
+
+    <script src="shopping-list.js"></script>
+</body>
+</html>
